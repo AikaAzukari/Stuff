@@ -1,0 +1,23 @@
+a = int(input("Temperature number: ")) 
+b = input("Is it Celsius (C), Fahrenheit (F) or Kelvin (K)? ")
+
+if b == "K":
+   c = input("Convert to Fahrenheit (F) or Celsius (C)? ")
+   if c == "F":
+       print("The temperature", a, "K° is ", round(1.8 * (a - 273) + 32, 2), "F°")
+   if c == "C":
+       print("The temperature", a, "K° is ", round(a - 273.15, 2), "C°")
+
+if b == "F":
+   c = input("Convert to Celsius (C) or Kelvin (K)")
+   if c == "C":
+       print("The temperature", a, "F° is ", round((a - 32) * 5/9, 2), "C°")
+   if c == "K":
+       print("The temperature", a, "F° is ", round(5/9 * a + 459.67, 2), "K°")
+
+if b == "C":
+   c = input("Convert to Fahrenheit (F) or Kelvin (K)")
+   if c == "F":
+       print("The temperature", a, "C° is ", round((a * 9/5) + 32, 2), "F°")
+   if c == "K":
+       print("The temperature", a, "C° is ", round(a + 273.15, 2), "K°")
