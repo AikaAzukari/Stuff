@@ -1,0 +1,28 @@
+import random
+
+heads = 0
+tails = 0
+
+flip = int(input("How many times would you like to flip the coin? "))
+
+for i in range(flip):
+    rand_num = random.randint(0,1)
+    if rand_num == 0:
+        heads += 1
+        #print("Heads") 
+    else:
+        tails += 1
+        #print("Tails")
+        
+#The print for each is to show each flip in case you want closer inspection
+
+print("After the coin was flipped", flip,"times, the coin landed on heads", heads,"times and landed on tails", tails,"times.")
+
+if heads >= tails:
+    hratio = round(heads/tails, 5)
+    tratio = round(tails/tails, 0)
+else:
+    hratio = round(tails/heads, 5)
+    tratio = round(heads/heads, 0)
+    
+print("The ratio for Heads:Tails is ", hratio,":", tratio)
